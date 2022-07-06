@@ -1,9 +1,20 @@
 const express = require("express");
 const path = require("path");
 const http = require("http");
+const dotenv = require("dotenv").config();
+var cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server);
+var twilio = require('twilio')(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN);
+
+// Use CORS middleware
+app.use(cors({
+	allowedOrigins: [process.env.ALLOWED_ORIGIN],
+	methods: ['GET']
+  }));
+  
+
 
 // Server all the static files from www folder
 app.use(express.static(path.join(__dirname, "www")));
@@ -14,6 +25,29 @@ app.use(express.static(path.join(__dirname, "node_modules/vue/dist/")));
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, null, () => console.log("Listening on port " + PORT));
 
+// API Endpoint for getting Twilio ICE/Turn/Stun Servers
+var cachedToken = null;
+function getNewToken () {
+  twilio.tokens.create({}, function(err, token) {
+    if (!err && token) {
+      cachedToken = token;
+    }
+  });
+}
+// fetch token initially
+getNewToken();
+// refetch new token every 15 mins and save to cache
+setInterval(getNewToken, 1000*60*10);
+
+app.get('/ice', function (req, res) {
+  if (!cachedToken) {
+    res.send(400, 'Problem getting ice servers data from Twilio')
+  } else {
+    res.json(cachedToken.iceServers);
+  }
+});
+
+// Terms of Service page
 app.get("/legal", (req, res) => res.sendFile(path.join(__dirname, "www/legal.html")));
 
 // All URL patterns should served with the same file.

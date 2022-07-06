@@ -14,8 +14,8 @@
 		/>
 		<meta name="application-name" content="Talk" />
 		<!-- Meta data for link fetching -->
-		<meta property="og:url" content="https://usetalk.io" />
-		<meta property="og:image" content="https://usetalk.io/icon.png" />
+		<meta property="og:url" content="https://talk.platformkit.com" />
+		<meta property="og:image" content="https://www.platformkit.com/images/icon.png" />
 		<meta property="og:title" content="Talk - Free group video call for the web" />
 		<meta
 			property="og:description"
@@ -28,8 +28,9 @@
 		<script defer src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 		<script defer src="/socket.io/socket.io.js"></script>
 		<script defer src="vue.min.js"></script>
-		<script defer src="app.js"></script>
-		<script defer src="script.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+		<script defer src="app.js"></script>	
+		<script defer src="script.js"></script>		
 		<title>Talk - Free group video call for the web</title>
 	</head>
 
@@ -37,27 +38,17 @@
 		<section id="videos"></section>
 		<main id="app" v-bind:style="'display:block'">
 			<div id="intro" v-if="showIntro && !showChat && !showSettings">
-				<p>
-					<strong>Talk</strong> is a free & open-source video conference app for the web. <br />Works in all major
-					browsers. No signups. No downloads. 100% peer-to-peer.
-				</p>
+				
 				<p>
 					<small>
 						<i>Share this link to start talking. </i><br />
-						<span class="roomLink">{{roomLink}}</span>
-						<a class="copyURL" href="javascript:void(0)" v-on:click="copyURL">{{copyText || "Copy"}}</a>
+						<span class="roomLink">{{roomLink}}</span><br>
+						<a class="copyURL" href="javascript:void(0)" v-on:click="copyURL">{{copyText || "Click here to copy room link"}}</a>
 					</small>
 				</p>
 				<div class="footer">
-					<iframe
-						src="https://ghbtns.com/github-btn.html?user=vasanthv&repo=talk&type=star&count=true"
-						frameborder="0"
-						scrolling="0"
-						width="150"
-						height="20"
-						title="GitHub"
-					></iframe>
-					<a href="/legal.html" class="terms light"><small>Terms</small></a>
+					
+					<a href="/legal.html" class="terms light" style="text-decoration:none;color:seagreen;"><small>Terms of Service</small></a>
 				</div>
 			</div>
 
@@ -107,7 +98,7 @@
 				<div class="label">Name 📛</div>
 				<input type="text" placeholder="Your name" v-model="name" v-on:keyup="nameToLocalStorage" />
 
-				<div class="copy link" v-on:click="copyURL">{{copyText || "Copy room link"}}</div>
+				<div class="copy link" v-on:click="copyURL">{{copyText || "Click here to copy room link"}}</div>
 				<div class="copy link" v-on:click="toggleSelfVideoMirror">
 					Mirror / Unmirror
 					<small class="light">(self-view)</small>

@@ -4,8 +4,7 @@
 	"description": "A free video call app for the web.",
 	"main": "server.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"postinstall": "node postinstall.js"
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
@@ -23,8 +22,11 @@
 	},
 	"homepage": "https://github.com/vasanthv/talk#readme",
 	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.1",
 		"express": "^4.17.1",
 		"socket.io": "^4.0.1",
+		"twilio": "^3.78.0",
 		"vue": "^2.6.12"
 	}
 }
