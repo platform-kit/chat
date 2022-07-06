@@ -49,8 +49,13 @@ getNewToken();
 // refetch new token every 15 mins and save to cache
 setInterval(getNewToken, 1000 * 60 * 10);
 
-app.get("/ice", cors(corsOptions), function (req, res) {	
-  if (!cachedToken) {
+app.get("/ice", cors(corsOptions), function (req, res) {	          ////////////////////////////////// Twilio STUN/TURN servers
+  console.log(req.get('host'));
+  var correctOrigin = false;
+  if(allowedOrigins.includes(req.get('host'))) {
+    correctOrigin = true;
+  }
+  if (!cachedToken || correctOrigin == false) {
     res.send(400, "Problem getting ice servers data from Twilio");
   } else {
     res.json(cachedToken.iceServers);
