@@ -8,19 +8,19 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/vasanthv/talk.git"
+		"url": "git+https://github.com/platform-kit/talk.git"
 	},
 	"keywords": [
 		"webrtc",
 		"socket.io",
 		"video"
 	],
-	"author": "Vasanth.V <imvasanthv@gmail.com>",
+	"author": "James Hunter Carter",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/vasanthv/talk/issues"
+		"url": "https://github.com/platform-kit/talk/issues"
 	},
-	"homepage": "https://github.com/vasanthv/talk#readme",
+	"homepage": "https://github.com/platform-kit/talk#readme",
 	"dependencies": {
 		"cors": "^2.8.5",
 		"dotenv": "^16.0.1",
