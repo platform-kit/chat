@@ -25,6 +25,14 @@ git clone https://github.com/<your_name>/talk.git
 npm install
 ```
 
+Add Environment variables
+
+```
+ALLOWED_ORIGIN=example.com
+TWILIO_ACCOUNT_SID=XXXXXXXXXX
+TWILIO_AUTH_TOKEN=XXXXXXXXXX
+```
+
 Run the app
 
 ```
