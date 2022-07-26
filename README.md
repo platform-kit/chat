@@ -24,10 +24,6 @@ Self-Hosted Audio/Video/Text Chat
 
 **License:** <br> <img src="https://img.shields.io/badge/License-000000?style=for-the-badge"/><img src="https://img.shields.io/badge/MIT-222?style=for-the-badge&logoColor=white"/>
 
-<div align="center">
-    <img src="docs/images/screenshot.png" style="border-radius:4px; margin:auto;max-width:300px;"  width="400"/>
-</div>
-
 ## Features
 
 - Free peer-to-peer audio calls, video calls, screensharing and chat via WebRTC
