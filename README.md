@@ -14,7 +14,6 @@ Self-Hosted Audio/Video/Text Chat
 <img src="https://img.shields.io/badge/Node.js-ebf5fb?style=for-the-badge&logo=nodedotjs"/>
 <img src="https://img.shields.io/badge/Express.js-ebf5fb?style=for-the-badge&logo=express&logoColor=000" />
 <img src="https://img.shields.io/badge/Vue.js-ebf5fb?style=for-the-badge&logo=vuedotjs" />
-<img src="https://img.shields.io/badge/WebRTC-ebf5fb?style=for-the-badge&logo=nuxt.js"/>
 </p>
 
 **Deploy with:** <br> 
