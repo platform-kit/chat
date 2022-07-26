@@ -1,4 +1,4 @@
-<h1 align="center">PlatformKit Auth</h1>
+<h1 align="center">PlatformKit Messenger</h1>
 
 <p align="center">
 Self-Hosted Audio/Video/Text Chat
