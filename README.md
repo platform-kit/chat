@@ -4,7 +4,10 @@
 Self-Hosted Audio/Video/Text Chat
 </p>
 
-<p>Peer-to-peer video, audio & text chat via WebRTC. Group video calls are achieved using WebRTC mesh. So the quality of the call is inversely proportional to the number of people on the call. The sweet number is somewhere around 6 to 8 people on an average high-speed connection.</p>
+<div align="center">
+    <img src="https://raw.githubusercontent.com/platform-kit/auth/master/chat/images/screenshot.png" style="border-radius:4px; margin:auto;max-width:300px;"  width="400"/>
+</div>
+
 
 **Connects with:** <br>
 
