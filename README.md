@@ -5,9 +5,8 @@ Self-Hosted Audio/Video/Text Chat
 </p>
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/platform-kit/auth/master/chat/images/screenshot.png" style="border-radius:4px; margin:auto;max-width:300px;"  width="400"/>
+    <img src="https://raw.githubusercontent.com/platform-kit/chat/master/assets/images/screenshot.png" style="border-radius:4px; margin:auto;max-width:300px;"  width="400"/>
 </div>
-
 
 **Connects with:** <br>
 
